@@ -14,19 +14,6 @@ local Config = {
     }
 }
 
-local Icn = {
-    x = "rbxassetid://76821953846248",
-    key = "rbxassetid://96510194465420",
-    shield = "rbxassetid://89965059528921",
-    check = "rbxassetid://76078495178149",
-    copy = "rbxassetid://125851897718493",
-    discord = "rbxassetid://83278450537116",
-    heart = "rbxassetid://116559368303288",
-    alert = "rbxassetid://140438367956051"
-}
-
-
-
 local ntl = {}
 function Config.ntf(tit, msg, dur, iconType)
     local nsg = Instance.new("ScreenGui")
@@ -139,3 +126,5 @@ function Config.ntf(tit, msg, dur, iconType)
     btn.Parent = nfr
     btn.MouseButton1Click:Connect(dismiss)
 end
+
+return Config
