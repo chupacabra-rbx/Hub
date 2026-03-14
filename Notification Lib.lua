@@ -14,6 +14,19 @@ local Config = {
     }
 }
 
+local Icn = {
+    x = "rbxassetid://76821953846248",
+    key = "rbxassetid://96510194465420",
+    shield = "rbxassetid://89965059528921",
+    check = "rbxassetid://76078495178149",
+    copy = "rbxassetid://125851897718493",
+    discord = "rbxassetid://83278450537116",
+    heart = "rbxassetid://116559368303288",
+    alert = "rbxassetid://140438367956051"
+}
+
+
+
 local ntl = {}
 function Config.ntf(tit, msg, dur, iconType)
     local nsg = Instance.new("ScreenGui")
@@ -50,15 +63,15 @@ function Config.ntf(tit, msg, dur, iconType)
     pbr.Parent = pbg
     Instance.new("UICorner", pbr).CornerRadius = UDim.new(0, 2)
 
-    local Config.Icn = Instance.new("ImageLabel")
-    Config.Icn.Size = UDim2.new(0, hgt - 30, 0, hgt - 30)
-    Config.Icn.Position = UDim2.new(0, 12, 0.5, 0)
-    Config.Icn.AnchorPoint = Vector2.new(0, 0.5)
-    Config.Icn.BackgroundTransparency = 1
-    Config.Icn.ImageColor3 = Color3.new(1, 1, 1)
-    Config.Icn.ScaleType = Enum.ScaleType.Fit
-    Config.Icn.Image = (iconType and Config.Icn[iconType]) or (has_logo and cfg.logo_asset) or Config.Icn.alert
-    Config.Icn.Parent = nfr
+    local icn = Instance.new("ImageLabel")
+    icn.Size = UDim2.new(0, hgt - 30, 0, hgt - 30)
+    icn.Position = UDim2.new(0, 12, 0.5, 0)
+    icn.AnchorPoint = Vector2.new(0, 0.5)
+    icn.BackgroundTransparency = 1
+    icn.ImageColor3 = Color3.new(1, 1, 1)
+    icn.ScaleType = Enum.ScaleType.Fit
+    icn.Image = (iconType and Config.Icn[iconType]) or Config.Icn.alert
+    icn.Parent = nfr
 
     local textX = 12 + (hgt - 30) + 12
 
@@ -126,5 +139,3 @@ function Config.ntf(tit, msg, dur, iconType)
     btn.Parent = nfr
     btn.MouseButton1Click:Connect(dismiss)
 end
-
-return Config
