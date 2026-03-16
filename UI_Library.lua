@@ -2217,13 +2217,13 @@ function Library:Window(Args)
                 Scale = if Mobile then 1 else WindowSize
             })
             
-            function Library:SizeSlider(Page, Plugins)
+            function Window:SizeSlider(Page, Plugins)
                 return Plugins:Slider(Page, "Interface Scaler", { 1, 2, 2 }, "Interface Scaler", function(v)
                     Scaler.Scale = v
                 end)
             end
             
-            function Library:SetTimeValue(Value)
+            function Window:SetTimeValue(Value)
                 THETIME.Text = Value
             end
         end
