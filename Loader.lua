@@ -1,3 +1,5 @@
+--quick test
+
 repeat task.wait() until game:IsLoaded()
 
 local Supported_Games = {
