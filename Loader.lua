@@ -5,5 +5,6 @@ local Supported_Games = {
     ["https://api.jnkie.com/api/v1/luascripts/public/f126b12c3ea427a9663d6eb469a2f6866c780d7bf9e4d032850c97e4551a2e68/download"] = {71706515477118}, -- +1 Jump Evolve Tower
     ["https://api.jnkie.com/api/v1/luascripts/public/8d41c17193abb3d20347abeb838ca6459ed0be71acb1bafb8378be6512270afd/download"] = {89469502395769}, -- Kick A Lucky Block
     ["https://api.jnkie.com/api/v1/luascripts/public/09af80ad2dfcde3984f8b7f74bd36ca0621b84b53fa9545928728015aa47aab6/download"] = {128784467030899}, -- Merge A Nuke!
+    ["https://api.jnkie.com/api/v1/luascripts/public/4c0781c24b96e0988ac23bff7d036258a95493786c2ae308a4dc6933faa48a7e/download"] = {138381251771774,124786371598438}, -- Drain The Lake
 }
 for i,v in pairs(Supported_Games) do if table.find(v,game.PlaceId) then loadstring(game:HttpGet(i))() end end
